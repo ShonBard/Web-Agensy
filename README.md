@@ -16,7 +16,7 @@
 
 * Клонировать проект в текущую папку и удалить все лишнее (одна команда)
 ```
-git clone https://github.com/ShonBard/webAgensy .
+git clone https://github.com/ShonBard/Web-Agensy .
 ```
 **2. Установить все зависимости  командой** `npm i`
 
