@@ -1,0 +1,83 @@
+// __________USER VARIABLES SECTION__________
+
+//__________Color__________
+$accent: #FFAF3D 
+$dark: #2B2E65
+$light: #DFDFDF
+$overlay: rgba(43, 46, 101, 0.67)
+
+// animation
+$proportions: 50px 
+$border: calc($proportions / 20px)
+$size: calc($proportions * 2)
+$shadow: calc($proportions / 2)
+$menuHeight: 100px
+
+//__________Fonts__________
+$fontsize: 16px 
+$textcolor: #333   
+$lineheight: 1.65 
+$title_f: raleway-kf1, sans-serif
+$text_f: raleway-kf1, sans-serif
+$number_f: roboto-rf2, sans-serif
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 20px
+// $gutter: $grid-gutter-width
+
+// IMPORT SECTION
+// _________________________Option: Include parts of Bootstrap_________________________ 
+// 1. СНАЧАЛА ВКЛЮЧИТЕ ФУНКЦИИ (ЧТОБЫ ВЫ МОГЛИ МАНИПУЛИРОВАТЬ ЦВЕТАМИ, SVG ВЫЧИСЛЕНИЕМ И Т. Д.)
+// 2. ВКЛЮЧИТЕ СЮДА ЛЮБЫЕ ПЕРЕОПРЕДЕЛЕНИЯ ПЕРЕМЕННЫХ ПО УМОЛЧАНИЮ
+// 3. ВКЛЮЧИТЕ ОСТАВШУЮСЯ ЧАСТЬ НЕОБХОДИМЫХ ТАБЛИЦ СТИЛЕЙ Bootstrap
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// 4. ВКЛЮЧИТЕ ЛЮБЫЕ НЕОБЯЗАТЕЛЬНЫЕ КОМПОНЕНТЫ Bootstrap, КАК ВАМ НРАВИТСЯ
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// 5. ДОБАВЬТЕ СЮДА ДОПОЛНИТЕЛЬНЫЙ ПОЛЬЗОВАТЕЛЬСКИЙ КОД
+
+
+// __________FONTS LOAD SECTION__________
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('raleway-kf1', normal, 800, '../fonts/raleway/ralewayextrabold-webfont.woff2')  
+@include font('raleway-kf1', normal, 700, '../fonts/raleway/ralewaybold-webfont.woff2')  
+@include font('raleway-kf1', normal, 600, '../fonts/raleway/ralewaysemibold-webfont.woff2')  
+@include font('raleway-kf1', normal, 500, '../fonts/raleway/ralewaymedium-webfont.woff2')  
+@include font('raleway-kf1', normal, 400, '../fonts/raleway/ralewayregular-webfont.woff2')  
+@include font('raleway-kf1', normal, 300, '../fonts/raleway/ralewaylight-webfont.woff2')  
+
+@include font('roboto-rf2', normal, 400, '../fonts/roboto/roboto-regular.woff2')				
+@include font('roboto-rf2', normal, 700, '../fonts/roboto/roboto-bold.woff2')				
+
+
+// __________GENERAL DOCUMENT STYLES__________
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: #f00
+	&:required:valid
+		border-color: #0f0
+
+body
+	font-family: $text_f
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	

@@ -1,0 +1,17 @@
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 110px;
+	background-color: $accent;
+}
+@include media-breakpoint-down(sm) {
+	.footer {
+		height: 80px;
+	}
+}  
+
+.Copyright {
+	color: #fff;
+	font-family: $number_f;
+}

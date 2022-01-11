@@ -1,0 +1,143 @@
+// HEADER
+.header {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	min-height: 810px;
+	background-size: cover;
+	background-position: center;
+}
+@include media-breakpoint-down(md) {
+	.header {
+		min-height: 924px;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.header {
+		min-height: 568px;
+	}
+}
+
+.header-title {
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	width: 100%;
+	max-width: 1080px;
+	margin-bottom: 50px;
+
+}
+@include media-breakpoint-down(md) {
+	.header-title {
+		max-width: 520px;
+		margin-bottom: 20px;
+	}
+}
+
+.header-discription {
+	position: relative;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	max-width: 840px;
+}
+@include media-breakpoint-down(md) {
+	.header-discription {
+		max-width: 520px;
+	}
+}
+
+.stats-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+@include media-breakpoint-down(md) {
+	.stats-wrap {
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.stats-wrap {
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+.stats-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	background-position: center;
+	height: 175px;
+	width: 252px;
+	position: relative;
+	margin: 50px 25px 0;
+	&:nth-child(1) {
+		background-image: url(../images/dist/statsBorder1.png);
+	}
+	&:nth-child(2) {
+		background-image: url(../images/dist/statsBorder2.png);
+	}
+	&:nth-child(3) {
+		background-image: url(../images/dist/statsBorder3.png);
+	}
+	&__num {
+		font-size: 50px;
+		font-family: $number_f;
+		font-weight: 700;
+		line-height: 1.4;
+		color: #fff;
+	}
+	&__title {
+		font-size: 18px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		color: #fff;
+	}
+}
+@include media-breakpoint-down(xl) {
+	.stats-col {
+		height: 144px;
+		width: 210px;
+		margin: 50px 10px 0;
+		&__num {
+			font-size: 40px;
+		}
+		&__title {
+			font-size: $fontsize;
+		}
+	}
+}
+@include media-breakpoint-down(md) {
+	.stats-col {
+		height: 110px;
+		width: 160px;
+		margin: 50px 0 0 0;
+		&__num {
+			font-size: 25px;
+		}
+		&__title {
+			font-size: 12px;
+		}
+	}
+}
+@include media-breakpoint-down(sm) {
+	.stats-col {
+		height: 96.25px;
+		width: 140px;
+		margin: 10px 0 0 0;
+
+		&__num {
+			font-size: 18px;
+		}
+		&__title {
+			font-size: 10px;
+		}
+	}
+}

@@ -1,0 +1,209 @@
+.work {
+	height: 100%;
+}
+
+.flex-line {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.top-line {
+	background-color: $dark;
+	height: 120px;
+	&__title {
+		text-transform: uppercase;
+		font-size: 36px;
+		position: relative;
+		text-align: center;
+		color: #fff;
+		width: 100%;
+		&::before {
+			content: 'OUR PROJECTS';
+			text-transform: uppercase;
+			font-weight: 800;
+			font-size: 96px;
+			top: 50%;
+			right: 50%;
+			transform: translate(50%, -50%);
+			color: rgba(255, 255, 255, 0.34);
+			width: 100%;
+			position: absolute;
+			z-index: 1;
+		}
+	}
+}
+@include media-breakpoint-down(lg) {
+	.top-line {
+		height: 100px;
+		&__title {
+			font-size: 30px;
+			&::before {
+				font-size: 70px;
+			}
+		}
+	}
+}
+@include media-breakpoint-down(sm) {
+	.top-line {
+		height: 80px;
+		&__title {
+			font-size: 20px;
+			&::before {
+				font-size: 38px;
+			}
+		}
+	}
+}
+
+.work-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(1, 430px) 320px;
+	height: 100%;
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		&:nth-child(1) {
+			grid-column: 1/3;
+		}
+		&:nth-child(2) {
+			grid-column: 3/5;
+		}
+		&:hover {
+			.text {
+				visibility: visible;
+				z-index: 2;
+			}
+			&::before {
+				content: '';
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				border: 10px solid #fff;
+				background-color: $accent;
+				opacity: .84;
+				position: absolute;
+			}
+		}
+	}
+}
+@include media-breakpoint-down(xl) {
+	.work-grid {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(1, 320px) 180px;
+	}
+}
+@include media-breakpoint-down(md) {
+	.work-grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 320px);
+		&__item {
+			&:nth-child(1) {
+				grid-column: 1;
+			}
+			&:nth-child(2) {
+				grid-column: 2;
+			}
+		}
+	}
+}
+@include media-breakpoint-down(sm) {
+	.work-grid {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(6, 320px);
+		&__item {
+			&:nth-child(1) {
+				grid-column: 1;
+			}
+			&:nth-child(2) {
+				grid-column: 1;
+				grid-row: 2;
+			}
+		}
+	}
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	position: relative;
+
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 50px;
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: 1px;
+		color: #fff;
+	}
+	&__subtitle {
+		text-align: center;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: 3px;
+		color: #fff;
+	}
+}
+@include media-breakpoint-down(xl) {
+	.text {
+		&__title {
+			font-size: 20px;
+			letter-spacing: 1px;
+		}
+		&__subtitle {
+			font-size: $fontsize;
+		}
+	}
+}
+@include media-breakpoint-down(md) {
+	.text {
+		&__title {
+			font-size: 30px;
+			letter-spacing: 1px;
+		}
+		&__subtitle {
+			font-size: 18px;
+		}
+	}
+}
+
+.bottom-line {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $dark;
+	height: 120px;
+	&__button {
+		background-color: rgba(255, 255, 255, 0.34);
+		border: 1px solid rgba(255, 255, 255, 0.34);
+		transition: .25s ease-out;
+		&:hover, :active, :focus {
+			color: $accent;
+			border: 1px solid $accent;
+		}
+	}
+}
+@include media-breakpoint-down(lg) {
+	.bottom-line {
+		height: 100px;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.bottom-line {
+		height: 80px;
+		&__button {
+			height: 40px;
+		}
+	}
+}

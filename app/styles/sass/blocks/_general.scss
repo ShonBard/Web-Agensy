@@ -1,0 +1,161 @@
+// GENERAL PROJECT STYLES
+body {
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	max-width: 1245px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.vertical {
+	flex-direction: column;
+}
+
+// WRAPPER
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// OVERLAY
+.overlay {
+	position: relative;
+	&::before {
+		content: '';
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: $overlay;
+		position: absolute;
+	}
+}
+
+// HEADING
+.title {
+	font-family: $title_f, sans-serif;
+	font-weight: 800;
+	font-size: 50px;
+	letter-spacing: 2px;
+	margin: 0;
+}
+@include media-breakpoint-down(xl) {
+	.title {
+		font-size: 40px;
+	}
+}
+@include media-breakpoint-down(md) {
+	.title {
+		font-size: 30px;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.title {
+		font-size: 20px;
+	}
+}
+
+// DISCRIPTION
+.discription {
+	font-weight: 500;
+	font-size: 24px;
+	letter-spacing: 1px;
+	margin: 0;
+}
+@include media-breakpoint-down(md) {
+	.discription {
+		font-size: 18px;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.discription {
+		font-size: 14px;
+	}
+}
+
+// BUTTON
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 55px;
+	width: 200px;
+	border-radius: 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 24px;
+	color: #fff;
+	line-height: 1;
+}
+@include media-breakpoint-down(md) {
+	.button {
+		height: 40px;
+		width: 180px;
+		font-size: 18px;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.button {
+		height: 35px;
+		width: 170px;
+		font-size: $fontsize;
+	}
+}
+
+// TEXT CONTENT
+.content {
+	&__title {
+		text-transform: uppercase;
+		font-size: 36px;
+		position: relative;
+		margin-bottom: 45px;
+		&::before {
+			text-transform: uppercase;
+			font-weight: 800;
+			font-size: 80px;
+			top: -25px;
+			left: -60px;
+			color: rgba(0, 0, 0, 0.125);
+			width: 100%;
+			position: absolute;
+			z-index: -1;
+		}
+	}
+	&__discription {
+		width: 100%;
+	}
+}
+@include media-breakpoint-down(lg) {
+	.content {
+		&__title {
+			font-size: 30px;
+			text-align: center;
+			margin-bottom: 35px;
+			&::before {
+				font-size: 70px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+@include media-breakpoint-down(sm) {
+	.content {
+		&__title {
+			font-size: 20px;
+			&::before {
+				font-size: 40px;
+			}
+		}
+	}
+}

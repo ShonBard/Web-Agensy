@@ -1,0 +1,38 @@
+{
+	"name": "web-agensy",
+	"version": "1.0.0",
+	"description": "Стартовый шаблон для быстрого развертывания проекта",
+	"main": "index.js",
+	"author": "Shon_Bard",
+	"license": "ISC",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.16.7",
+		"@babel/preset-env": "^7.16.7",
+		"autoprefixer": "^10.4.1",
+		"babel-loader": "^8.2.3",
+		"babel-plugin-module-resolver": "^4.1.0",
+		"babel-plugin-root-import": "^6.6.0",
+		"browser-sync": "^2.27.7",
+		"cssnano": "^5.0.14",
+		"del": "^6.0.0",
+		"gulp": "^4.0.2",
+		"gulp-concat": "^2.6.1",
+		"gulp-imagemin": "^8.0.0",
+		"gulp-newer": "^1.4.0",
+		"gulp-postcss": "^9.0.1",
+		"gulp-sass": "^5.1.0",
+		"gulp-sass-glob": "^1.1.0",
+		"postcss": "^8.4.5",
+		"sass": "^1.45.2",
+		"terser-webpack-plugin": "^5.3.0",
+		"webpack": "^5.65.0",
+		"webpack-stream": "^7.0.0"
+	},
+	"dependencies": {
+		"bootstrap": "^5.1.3"
+	}
+}

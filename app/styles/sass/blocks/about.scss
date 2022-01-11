@@ -1,0 +1,42 @@
+.about {
+	display: flex;
+	align-items: center;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	min-height: 568px;
+}
+
+.about-title {
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	width: 100%;
+	margin-bottom: 50px;
+}
+@include media-breakpoint-down(sm) {
+	.about-title {
+		margin-bottom: 20px;
+	}
+}
+
+.about-discription {
+	position: relative;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	max-width: 1054px;
+}
+@include media-breakpoint-down(sm) {
+	.about-discription {
+		max-width: 300px;
+	}
+}
+
+
+
+
+
+
+

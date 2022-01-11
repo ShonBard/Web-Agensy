@@ -1,0 +1,129 @@
+.preloader {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #F0F0F0;
+	z-index: 1000;
+}
+.preloader-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: $proportions * 4;
+	height: $proportions * 4;
+	position: relative;
+	&__circle {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			width: $proportions * 1.7;
+			height: $proportions * 1.7;
+			border-radius: 50%;
+			overflow: hidden;
+			box-shadow:inset 0 0 $shadow $shadow;
+			z-index: 1200;
+			
+	}
+	&__range {
+			position: absolute;
+	}
+}
+.a-range {
+	width: 23.75%;
+	height: 23.75%;
+	border: $border - 3px solid #F0F0F0;
+	border-left-color: #fff;
+	border-right-color: #fff;
+	border-radius: 50%;
+	animation: reverse-rangen  linear 16s infinite; 
+}
+.b-range {
+	width: 27.5%;
+	height: 27.5%;
+	border: $border - 1px solid #F0F0F0;
+	border-left-color: #00f;
+	border-right-color: #00f;
+	border-top-color: #00f;
+	border-radius: 50%;
+	animation: rangen  linear 5s infinite; 
+}
+.c-range {
+	width: 32.5%;
+	height: 32.5%;
+	border: $border - 1px solid #c00707;
+	border-radius: 50%;
+	animation: reverse-rangen  linear 4s infinite; 
+}
+.d-range {
+	width: 47.5%;
+	height: 47.5%;
+	border: $border - 1px solid #F0F0F0;
+	border-top-color: #00b100;
+	border-bottom-color: #00b100;
+	border-left-color: #00b100;
+	border-radius: 50%;
+	animation: rangen  linear 10s infinite; 
+}
+.e-range {
+	width: 55%;
+	height: 55%;
+	border: $border solid #F0F0F0;
+	border-top-color: #ccc;
+	border-bottom-color: #ccc;
+	border-radius: 50%;
+	animation: reverse-rangen  linear 14s infinite; 
+}
+.f-range {
+	width: 60%;
+	height: 60%;
+	border: $border solid #F0F0F0;
+	border-top-color: #000;
+	border-bottom-color: #000;
+	border-radius: 50%;
+	animation: rangen  linear 16s infinite; 
+}
+.g-range {
+	width: 65%;
+	height: 65%;
+	border: $border - 2px solid #F0F0F0;
+	border-right-color: #c00707;
+	border-left-color: #c00707;
+	border-radius: 50%;
+	animation: rangen  linear 6s infinite;
+}
+.h-range {
+	width: 72%;
+	height: 72%;
+	border: $border solid #F0F0F0;
+	border-left-color:  #00f;
+	border-right-color:  #00f;
+	border-radius: 50%;
+	animation: reverse-rangen  linear 5s infinite; 
+}
+.i-range {
+	width: 75%;
+	height: 75%;
+	border: $border - 1px solid #fff;
+	border-radius: 50%;
+	animation: rangen  linear 6s infinite; 
+}
+@keyframes rangen {
+	0% {
+			transform: rotateZ(0deg);
+	}
+	100% {
+			transform: rotateZ(360deg);
+	} 
+}
+@keyframes reverse-rangen {
+	0% {
+			transform: rotateZ(0deg);
+	}
+	100% {
+			transform: rotateZ(-360deg);
+	} 
+}
